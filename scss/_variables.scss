@@ -1,0 +1,15 @@
+$font-family: 'Montserrat', sans-serif;
+$font-color: #fff;
+
+$primary-blue: #53abf8;
+$primary-purple: #8771fd;
+
+$lg: 1024px;
+$md: 768px;
+$sm: 576px;
+
+@mixin break($breakpoint) {
+    @media screen and (max-width: ($breakpoint - 1px)) {
+        @content
+    }
+}

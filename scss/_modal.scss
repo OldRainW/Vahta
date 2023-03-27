@@ -1,0 +1,131 @@
+.modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s opacity ease-in-out, .3s visibility ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 727; //wysi
+    font-family: $font-family;
+
+    &__exit {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 40px;
+        font-size: 32px;
+        color: aqua;
+        background: transparent;
+    }
+
+    &__content {
+        position: relative;
+        z-index: 1;
+        max-width: 600px;
+    }
+
+    &__form {
+        padding: 60px 40px;
+        background: linear-gradient(90deg, $primary-purple, $primary-blue);
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        border-radius: 18px;
+
+    }
+
+    &__title {
+        font-size: 32px;
+        line-height: 42px;
+        font-weight: 700;
+        color: #fff;
+        text-align: center;
+    }
+
+    & .success,
+    & .error {
+        display: none;
+    }
+
+    &._success span.success,
+    &._error span.error {
+        display: block;
+    }
+}
+
+.success,
+.error {
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+}
+
+._validate-error {
+    box-shadow: 0 0 15px red;
+}
+
+.modal::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(19, 28, 46, 0.8) url('/img/loading.gif') center / 50px no-repeat;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5 ease 0s;
+    z-index: 728; //wydsi
+}
+
+.modal._sending::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(#131c2e, .85);
+    z-index: 0;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    &__input {
+        padding: 16px;
+        border: 1px solid rgba(#131c2e, 0.4);
+        border-radius: 8px;
+        background: transparent;
+        color: #fff;
+    }
+
+    &__input::placeholder {
+        color: rgba(#fff, .6);
+    }
+
+    &__btn {
+        padding: 16px;
+        background: #cae5fa;
+        border-radius: 32px;
+        transition: .3s background ease-in-out;
+    }
+
+    &__btn:hover {
+        background: #fff;
+    }
+}

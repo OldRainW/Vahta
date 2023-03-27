@@ -1,0 +1,61 @@
+@import './nullstyle';
+@import './variables';
+@import './fonts';
+
+body {
+    background: #162236;
+    font-family: $font-family;
+    color: $font-color;
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+    z-index: 1;
+    position: relative;
+}
+
+.title {
+    font-size: 36px;
+    line-height: 56px;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.request-call-btn {
+    background: linear-gradient(90deg, #C570FE 0%, #6EC2FB 100%);
+    color: #fff;
+    border-radius: 210px;
+    text-transform: uppercase;
+    padding: 18px 58px;
+}
+
+@include break($lg) {
+    .request-call-btn {
+        display: none;
+    }
+}
+
+@include break($md) {}
+
+@include break($sm) {
+    .title {
+        font-size: 18px;
+        font-weight: 500;
+    }
+}
+
+@import './header';
+@import './about-service';
+@import './consult';
+@import './suitable';
+@import './presentation';
+@import './qualities';
+@import './results';
+@import './data';
+@import './mobile-content';
+@import './profit';
+@import './footer';
+@import './modal';

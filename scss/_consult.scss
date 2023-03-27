@@ -1,0 +1,34 @@
+.consult {
+    margin-bottom: 62px;
+
+    &__wrapper {
+        background: linear-gradient(90deg, rgba(91, 81, 175, 0.46) 0%, rgba(83, 170, 249, 0.65) 56.72%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.consult-button {
+    background: linear-gradient(90deg, #C075FE 0%, #73BEFB 100%);
+    border-radius: 44px;
+    padding: 22px 72px;
+    margin: 26px 0;
+    text-transform: uppercase;
+    color: #fff;
+    box-shadow: 2px 2px 0 0 #502C6F;
+}
+
+@include break($lg) {
+    .consult {
+        margin-bottom: 56px;
+    }
+}
+
+@include break($md) {
+    .consult {
+        display: none;
+    }
+}
+
+@include break($sm) {}

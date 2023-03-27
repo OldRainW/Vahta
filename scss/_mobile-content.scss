@@ -1,0 +1,28 @@
+.mobile-exclusive {
+    display: none;
+
+    &__content {
+        margin: 0 auto;
+    }
+
+    &__box {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__image {}
+}
+
+.swiper-mobile {
+    position: relative;
+    overflow: hidden;
+    height: 556px;
+    margin: 0 auto;
+}
+
+@include break($lg) {
+    .mobile-exclusive {
+        display: block;
+        margin-bottom: 24px;
+    }
+}
